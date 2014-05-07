@@ -1,3 +1,4 @@
+%-*-Prolog -*-
 
 model(Key, Value).
 
