@@ -1,15 +1,8 @@
 %-*-Prolog -*-
 
-model(Key, Value).
-
-
-clear_value(Key) :-
-    retract(model(Key, _)).
-
+model("KEY","value").
+ 
 
 add_to_model(Key, Value) :-
     retract(model(Key, _)),
     asserta(model(Key, Value)).
-
-
-  

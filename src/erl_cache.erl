@@ -100,7 +100,8 @@ handle_call({set, Key,Value}, _From, State = #state{data = Tree}) ->
 %%                                  {stop, Reason, State}
 %% @end
 %%--------------------------------------------------------------------
-handle_cast(_Msg, State) ->
+handle_cast(reset, _) ->
+    {ok, State} = init([]),
     {noreply, State}.
 
 %%--------------------------------------------------------------------
